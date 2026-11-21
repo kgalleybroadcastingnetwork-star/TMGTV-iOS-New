@@ -1,0 +1,103 @@
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:#09070e;color:#fff;line-height:1.5}a{text-decoration:none;color:inherit}.topbar{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:12px 5%;background:rgba(9,7,14,.92);backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.08)}.brand{display:flex;align-items:center;gap:12px}.brand img{width:48px;height:48px;object-fit:contain;border-radius:10px}.brand strong{display:block;font-size:15px}.brand span{display:block;color:#a9a3b5;font-size:11px}.topbar nav{display:flex;gap:24px}.topbar nav a{color:#ddd8e6;font-size:14px}.topbar nav a:hover{color:#ff4f7a}.menu-btn{display:none;background:none;color:#fff;border:0;font-size:25px}.hero{min-height:650px;padding:90px 7%;display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:40px;background:radial-gradient(circle at 80% 35%,rgba(124,84,248,.25),transparent 35%),radial-gradient(circle at 10% 80%,rgba(255,50,100,.15),transparent 30%)}.eyebrow{font-size:11px;letter-spacing:3px;color:#b98cff;font-weight:800}.hero h1{font-size:clamp(44px,6vw,78px);line-height:1.02;margin:16px 0 22px;letter-spacing:-2px}.hero h1 span{background:linear-gradient(90deg,#ff3d68,#b66cff);-webkit-background-clip:text;background-clip:text;color:transparent}.hero p{max-width:620px;color:#bcb6c8;font-size:18px}.hero-actions{display:flex;gap:12px;margin-top:30px}.btn{display:inline-flex;align-items:center;justify-content:center;border-radius:12px;padding:13px 19px;font-weight:800;font-size:13px}.btn.primary{background:linear-gradient(135deg,#ff315d,#8c51ff);box-shadow:0 10px 30px rgba(255,49,93,.2)}.btn.ghost{border:1px solid rgba(255,255,255,.15);color:#eee}.btn.small{padding:10px 13px;font-size:12px}.hero-logos{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:28px;padding:26px;box-shadow:0 25px 70px rgba(0,0,0,.25)}.tmg-mark{width:100%;height:180px;object-fit:contain;border-radius:18px;background:#000}.station-logos{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:14px}.station-logos img{width:100%;height:70px;object-fit:contain;background:#fff;border-radius:10px;padding:3px}.section{padding:80px 7%}.section.alt{background:#0e0a16}.section-heading{display:flex;align-items:end;justify-content:space-between;margin-bottom:28px}.section h2{font-size:36px;margin:8px 0 0}.live-badge{background:rgba(255,50,90,.12);color:#ff5575;border:1px solid rgba(255,50,90,.25);padding:7px 12px;border-radius:999px;font-size:11px;font-weight:900}.live-badge i{display:inline-block;width:7px;height:7px;border-radius:50%;background:#ff3f64;margin-right:6px;box-shadow:0 0 10px #ff3f64}
+
+/* Channel Tab Selector */
+.channel-toggle{display:flex;gap:12px;margin-bottom:24px;justify-content:flex-start}
+.channel-toggle-btn{padding:12px 22px;border-radius:999px;border:1px solid rgba(255,255,255,.15);background:rgba(255,255,255,.06);color:#ddd;font-weight:800;font-size:13px;cursor:pointer;transition:all .2s ease}
+.channel-toggle-btn.active{background:linear-gradient(135deg,#ff315d,#8c51ff);color:#fff;border-color:transparent;box-shadow:0 6px 20px rgba(255,49,93,.35)}
+
+.live-grid{display:grid;grid-template-columns:1fr;gap:25px}
+.live-card{background:#13101b;border:1px solid rgba(255,255,255,.09);border-radius:22px;overflow:hidden}
+.channel-head{display:flex;align-items:center;gap:14px;padding:18px}
+.channel-head img{width:64px;height:54px;object-fit:contain;background:#fff;border-radius:10px;padding:5px}
+.channel-head h3{margin:0;font-size:20px}
+.channel-head p{margin:3px 0 0;color:#9e98aa;font-size:12px}
+
+/* Live Video Player - Auto Fit Responsively */
+.player-wrap{position:relative;width:100%;background:#000;display:flex;align-items:center;justify-content:center;overflow:hidden;aspect-ratio:16/9}
+.player-wrap iframe{width:100%;height:100%;max-width:100%;max-height:100%;border:0;object-fit:contain}
+
+.card-actions{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:15px 18px}
+.socials{display:flex;gap:7px}
+.social{width:34px;height:34px;border-radius:9px;display:grid;place-items:center;background:#24202d;border:1px solid rgba(255,255,255,.07)}
+.social svg{width:17px;height:17px;fill:none;stroke:#fff;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.social.facebook svg,.social.youtube svg,.social.tiktok svg{fill:#fff;stroke:none}
+.social:hover{transform:translateY(-2px);background:#332d40}
+
+/* Radio Stations Grid & Player Frame */
+.radio-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.radio-card{background:#13101b;border:1px solid rgba(255,255,255,.09);border-radius:20px;padding:18px;display:flex;flex-direction:column;gap:16px;transition:transform .2s ease}
+.radio-card:hover{transform:translateY(-3px);border-color:rgba(185,140,255,.3)}
+.radio-head{display:flex;align-items:center;gap:14px}
+.radio-head img{width:64px;height:64px;object-fit:contain;border-radius:14px;background:#fff;padding:2px}
+.radio-head h3{margin:0;font-size:18px}
+.radio-head p{margin:3px 0 0;color:#9e98aa;font-size:12px}
+
+/* Unified Responsive Radio Player Container - Edge to Edge Fit */
+.radio-player-wrap{position:relative;width:100%;aspect-ratio:16/9;min-height:180px;border-radius:14px;overflow:hidden;background:#000;border:1px solid rgba(255,255,255,.08);margin:0;padding:0}
+.radio-player-wrap iframe{position:absolute;top:0;left:0;width:100%;height:100%;max-width:100%;max-height:100%;border:0;margin:0;padding:0;display:block}
+
+.channel-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.channel-tile{display:flex;align-items:center;gap:20px;padding:18px;background:#17121f;border:1px solid rgba(255,255,255,.08);border-radius:18px}
+.channel-tile img{width:100px;height:70px;object-fit:contain;background:#fff;border-radius:12px;padding:5px}
+.channel-tile strong{display:block;font-size:19px}
+.channel-tile span{color:#b98cff;font-size:13px}
+
+.about{display:grid;grid-template-columns:1fr 320px;gap:50px;align-items:center}
+.about p{color:#b8b2c2;max-width:700px}
+.about-box{background:linear-gradient(145deg,#181222,#100d16);border:1px solid rgba(255,255,255,.08);border-radius:20px;padding:24px;text-align:center}
+.about-box img{width:100%;height:140px;object-fit:contain;background:#000;border-radius:14px}
+.about-box p{font-size:12px;margin:12px 0 0;color:#d4ccdd}
+
+/* Powered by K.Galley Media Styling */
+.powered-by{display:block;font-size:11px;color:#a9a3b5;margin-top:3px}
+.powered-by strong{color:#b98cff}
+.powered-by-tag{display:inline-block;margin-top:10px;padding:4px 12px;background:rgba(185,140,255,.1);border:1px solid rgba(185,140,255,.25);border-radius:999px;font-size:11px;color:#d4ccdd}
+.powered-by-tag strong{color:#b98cff}
+
+footer{padding:25px 7%;display:flex;justify-content:space-between;gap:20px;border-top:1px solid rgba(255,255,255,.08);color:#9d97a8;font-size:12px}
+.footer-brand{display:flex;align-items:center;gap:12px}
+.footer-brand img{width:32px;height:32px;object-fit:contain;border-radius:6px}
+.footer-links{display:flex;gap:18px}
+
+/* Portrait Orientation - Fits Vertically & Horizontally */
+@media (orientation:portrait){
+  .player-wrap{width:100%;max-height:60vh;aspect-ratio:16/9}
+}
+
+/* Landscape Orientation - Auto-fits screen height & width without Fullscreen button */
+@media (orientation:landscape){
+  .topbar{padding:6px 4%}
+  .brand img{width:32px;height:32px}
+  .section{padding:20px 4%}
+  .hero{min-height:auto;padding:30px 4%}
+  .player-wrap{width:100%;height:calc(100vh - 100px);max-height:calc(100vh - 100px);aspect-ratio:16/9;margin:0 auto}
+}
+
+@media(max-width:900px){
+  .hero{grid-template-columns:1fr;padding-top:50px}
+  .hero-logos{max-width:650px}
+  .radio-grid{grid-template-columns:1fr}
+  .about{grid-template-columns:1fr}
+  .topbar nav{display:none}
+  .menu-btn{display:block}
+  .topbar nav.open{position:absolute;display:flex;flex-direction:column;gap:0;right:5%;top:60px;background:#17121f;border:1px solid rgba(255,255,255,.1);border-radius:14px;overflow:hidden;width:190px}
+  .topbar nav.open a{padding:14px 18px}
+  .channel-grid{grid-template-columns:1fr}
+}
+
+@media(max-width:560px){
+  .hero{padding-left:4%;padding-right:4%}
+  .section{padding:40px 4%}
+  .hero h1{font-size:42px}
+  .hero-logos{padding:14px}
+  .station-logos img{height:60px}
+  .card-actions{flex-direction:column;align-items:stretch}
+  .socials{justify-content:center}
+  .section-heading{align-items:start}
+  .section h2{font-size:26px}
+  .footer-links{display:none}
+}
+
+img{max-width:100%}
+.tmg-mark{object-fit:contain}
+.station-logos img,.channel-card img,.footer-brand img{object-fit:contain}
