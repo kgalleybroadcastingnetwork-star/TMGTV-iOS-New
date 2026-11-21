@@ -1,0 +1,26 @@
+
+workflows:
+  tmg-tv-ios:
+    name: TMG TV iOS Build
+    instance_type: mac_mini_m2
+    max_build_duration: 60
+    environment:
+      xcode: latest
+    scripts:
+      - name: Install XcodeGen
+        script: |
+          brew install xcodegen
+
+      - name: Generate Xcode project
+        script: |
+          xcodegen generate
+
+      - name: Build iOS simulator app
+        script: |
+          xcodebuild \
+            -project TMGTV.xcodeproj \
+            -scheme TMGTV \
+            -configuration Release \
+            -sdk iphonesimulator \
+            CODE_SIGNING_ALLOWED=NO \
+            build
